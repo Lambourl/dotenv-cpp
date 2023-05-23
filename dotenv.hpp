@@ -68,7 +68,7 @@ namespace dotenv {
 
   inline std::vector<std::map<std::string, std::string>> read_file_dotenv(std::string path_filename) {
     std::vector<std::map<std::string, std::string>> vector_of_future_env;
-    std::fstream file(path_filename.c_str(), file.binary | file.in | file.out);
+    std::fstream file(path_filename.c_str(), std::ios::binary | std::ios::in | std::ios::out);
 
     std::string line;
     std::string key_multi = "";
